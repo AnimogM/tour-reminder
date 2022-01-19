@@ -1,11 +1,52 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
-const Accordion = () => {
+import Tour from './Tour.js';
+
+const Tours = () => {
+
+    const url = 'https://course-api.com/react-tours-project';
+
+    const[tours, setTours] = useState([]);
+    const[loading, setLoading] = useState(true);
+
+    useEffect(()=> {
+        fetchTour();
+    },[]);
+    
+    const fetchTour = async() =>{
+        try {
+            const response = await fetch(url)
+            const tours = await response.json()
+            setTours(tours)
+            setLoading(false)
+            } 
+        catch (error) {
+            console.log(error)
+        }
+    }
+      
+    const handleRemove = (name) => {
+        setTours(tours.filter(tour => tour.name !== name));
+    };
+
+    if(loading){
+        return <h1 className='t-head'>Loading ...</h1>
+    }
+
+    if(tours.length === 0){
+        return <h1 className='t-head'>Sorry, we have no tours left</h1>
+    }
+
     return (
-        <div>
-            aa
+        <div className='t-main'>
+            <h1>Tour</h1>
+            {tours.map(tour => {
+                return (
+                    <Tour {...tour} handleRemove={handleRemove}/>
+                )
+            })}
         </div>
     )
 }
 
-export default Accordion
+export default Tours;

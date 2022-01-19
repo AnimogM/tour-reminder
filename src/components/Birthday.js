@@ -5,7 +5,7 @@ const Birthday = () => {
     const[people, setPeople] = useState(data)
 
     const handleRemove = (name) => {
-        data.filter(person => person.name !== name)
+        setPeople(people.filter(person => person.name !== name))
     }
 
     return (
