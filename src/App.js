@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Birthday from './components/Birthday';
+import Tours from './components/Tours';
 
 function App() {
+  const[menu, setMenu] = useState("birthday");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <nav className="header">
+        <button className={menu === "birthday"? 'active': ''} onClick={()=> setMenu("birthday")}>Birthday Remainder</button>
+        <button className={menu === "tour"? 'active': ''} onClick={()=> setMenu("tour")}>Tours</button>
+      </nav>
+     <main>
+        {menu === "birthday"? <Birthday/>: <Tours/>}
+     </main>
     </div>
   );
 }
