@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 import './review.css'
 import { data } from './data'
-import Person from './Person';
+import Review from '../../components/Review';
 
-const Review = () => {
+const Reviews = () => {
 
   const [num, setNum] = useState(0)
 
@@ -40,9 +40,9 @@ const Review = () => {
   return (
     <>
       <h1 className='head'>Reviews</h1>
-      <Person {...data[num]} handleRandom={handleRandom} handleNext={handleNext} handlePrev={handlePrev}/>
+      <Review {...data[num]} handleRandom={handleRandom} handleNext={handleNext} handlePrev={handlePrev}/>
     </>
   );
 };
 
-export default Review;
+export default Reviews;

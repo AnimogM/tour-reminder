@@ -2,8 +2,11 @@ import { Routes, Route } from 'react-router-dom';
 
 import SideBar from './components/SideBar';
 import Birthday from './pages/Birthday/Birthday';
-import Review from './pages/Review/Review';
+import Reviews from './pages/Review/Reviews';
 import Tours from './pages/Tours/Tours';
+import FoodMenu from './pages/FoodMenu/FoodMenu';
+import Accordions from './pages/Accordion/Accordions';
+import NotFound from './pages/NotFound';
 
 function App() {
 
@@ -13,7 +16,10 @@ function App() {
      <Routes>
         <Route exact path='/' element={<Birthday/>}/>
         <Route path='/tours' element={<Tours/>}/>
-        <Route path='/review' element={<Review/>}/>
+        <Route path='/review' element={<Reviews/>}/>
+        <Route path='/food-menu/' element={<FoodMenu/>}/>
+        <Route path='/accordion/' element={<Accordions/>}/>
+        <Route path='*' element={<NotFound/>}/>
      </Routes>
     </>
   );

@@ -1,7 +1,12 @@
 import React from 'react';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 
-const Person = ({name, job, desc, img, handleRandom, handleNext, handlePrev}) => {
+const Review = ({name, job, desc, img, handleRandom, handleNext, handlePrev}) => {
+
+  const pointer = {
+    cursor: 'pointer'
+  }
+
   return (
       <>
         <article className='r-article'>
@@ -12,8 +17,8 @@ const Person = ({name, job, desc, img, handleRandom, handleNext, handlePrev}) =>
                 <p>{desc}</p>
             </div>
             <div className="r-icon">
-                <BiChevronLeft size={30} onClick={handlePrev}/>
-                <BiChevronRight size={30} onClick={handleNext}/>
+                <BiChevronLeft size={30} onClick={handlePrev} style={pointer}/>
+                <BiChevronRight size={30} onClick={handleNext} style={pointer}/>
             </div>
             <button className='r-btn' onClick={handleRandom}>Suprise Me</button>
         </article>
@@ -21,4 +26,4 @@ const Person = ({name, job, desc, img, handleRandom, handleNext, handlePrev}) =>
   )
 };
 
-export default Person;
+export default Review;

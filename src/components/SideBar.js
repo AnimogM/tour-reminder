@@ -24,6 +24,8 @@ const SideBar = () => {
           <Link to='/tours' className='nav-links' >Tours</Link>
           <Link to='/' className='nav-links'>Birthday Reminder</Link>
           <Link to='/review' className='nav-links'>Review</Link>
+          <Link to='/food-menu' className='nav-links'>Food Menu</Link>
+          <Link to='/accordion' className='nav-links'>Accordion</Link>
         </nav>
       </div>
       </>
