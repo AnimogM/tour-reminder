@@ -10,7 +10,7 @@ const Tour = ({name, image, price, info, handleRemove}) => {
         <div className='t-box'>
             <div className='t-text'>
                 <h2>{name}</h2>
-                <h4>{price}</h4>
+                <h4>${price}</h4>
             </div>
             <p>{show? info: info.substring(0, 150)}</p>
             <button onClick={()=> setShow(!show)}>{show? 'show less':'show more'}</button>

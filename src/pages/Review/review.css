@@ -1,0 +1,38 @@
+.r-article{
+    width: 500px;
+    max-width: 95%;
+    padding: 40px 25px;
+    margin: 10px auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #aaa;
+    text-align: center;
+    border-radius: 40px 0 40px 40px;
+}
+
+.r-article img{
+    border-radius: 50%;
+    object-fit: cover;
+    border-right: 10px solid cadetblue;
+}
+
+.r-text h2{
+    color: cadetblue;
+}
+
+.r-text p{
+    padding-top: 10px;
+    text-align: justify;
+    font-size: .95rem;
+}
+
+.r-icon{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-block: 20px;
+}
+
+.r-btn{
+    margin: 0;
+    background-color: teal;
+}

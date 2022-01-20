@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { data } from '../data';
+
+import './birthday.css';
+import { data } from './data';
 
 const Birthday = () => {
     const[people, setPeople] = useState(data)

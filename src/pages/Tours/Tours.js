@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import Tour from './Tour.js';
+import Tour from '../../components/Tour.js';
+import './tours.css';
 
 const Tours = () => {
 
@@ -39,10 +40,10 @@ const Tours = () => {
 
     return (
         <div className='t-main'>
-            <h1>Tour</h1>
+            <h1 className='head'>Tour</h1>
             {tours.map(tour => {
                 return (
-                    <Tour {...tour} handleRemove={handleRemove}/>
+                    <Tour key={tour.id} {...tour} handleRemove={handleRemove}/>
                 )
             })}
         </div>

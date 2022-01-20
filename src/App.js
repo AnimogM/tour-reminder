@@ -1,20 +1,21 @@
-import { useState } from 'react';
-import Birthday from './components/Birthday';
-import Tours from './components/Tours';
+import { Routes, Route } from 'react-router-dom';
+
+import SideBar from './components/SideBar';
+import Birthday from './pages/Birthday/Birthday';
+import Review from './pages/Review/Review';
+import Tours from './pages/Tours/Tours';
 
 function App() {
-  const[menu, setMenu] = useState("tours");
 
   return (
-    <div>
-      <nav className="header">
-        <button className={menu === "birthday"? 'active': ''} onClick={()=> setMenu("birthday")}>Birthday Reminder</button>
-        <button className={menu === "tour"? 'active': ''} onClick={()=> setMenu("tour")}>Tours</button>
-      </nav>
-     <main>
-        {menu === "birthday"? <Birthday/>: <Tours/>}
-     </main>
-    </div>
+    <>
+     <SideBar/>
+     <Routes>
+        <Route exact path='/' element={<Birthday/>}/>
+        <Route path='/tours' element={<Tours/>}/>
+        <Route path='/review' element={<Review/>}/>
+     </Routes>
+    </>
   );
 }
 
