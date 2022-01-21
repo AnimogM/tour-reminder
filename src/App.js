@@ -6,6 +6,8 @@ import Reviews from './pages/Review/Reviews';
 import Tours from './pages/Tours/Tours';
 import FoodMenu from './pages/FoodMenu/FoodMenu';
 import Accordions from './pages/Accordion/Accordions';
+import Tabs from './pages/Tab/Tabs'
+import Slider from './pages/Slider/Slider'
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path='/review' element={<Reviews/>}/>
         <Route path='/food-menu/' element={<FoodMenu/>}/>
         <Route path='/accordion/' element={<Accordions/>}/>
+        <Route path='/tabs' element={<Tabs/>}/>
+        <Route path='/slider' element={<Slider/>}/>
         <Route path='*' element={<NotFound/>}/>
      </Routes>
     </>

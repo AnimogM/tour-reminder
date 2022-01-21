@@ -64,7 +64,7 @@ button{
   transform: translateX(-1000px);
 }
 
-.active{
+.open-bar{
   transform: translateX(0);
 }
 

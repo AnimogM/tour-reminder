@@ -44,3 +44,13 @@
     padding: 8px 15px;
     background-color: rgb(19, 105, 139);
   }
+
+  @media screen and (max-width: 800px) {
+    .b-container{
+      padding: 30px 3px;
+    }
+    .b-box{
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

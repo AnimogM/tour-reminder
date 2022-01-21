@@ -18,7 +18,7 @@ const SideBar = () => {
         <h1>React Projects</h1>
         <BiMenu size={40} onClick={handleMenu} style={{cursor: 'pointer'}}/>
       </div>
-      <div className={menu? 'side-bar active': 'side-bar'}>
+      <div className={`side-bar ${menu? 'open-bar': ''}`}>
         <div style={{textAlign: 'end', cursor: 'pointer'}}><GrClose size={25} onClick={handleMenu}/></div>
         <nav className='menu-items'>
           <Link to='/tours' className='nav-links' >Tours</Link>
