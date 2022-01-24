@@ -1,0 +1,40 @@
+.s-box {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.s-box label {
+  color: rgb(8, 93, 104);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.s-box input {
+  padding: 3px 6px;
+  width: 80px;
+  border: none;
+  background: #fff;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+.s-box button {
+  font-size: 1.2rem;
+  background-color: rgb(38, 117, 113);
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.s-container{
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.s-container p{
+    padding-bottom: 50px;
+}
